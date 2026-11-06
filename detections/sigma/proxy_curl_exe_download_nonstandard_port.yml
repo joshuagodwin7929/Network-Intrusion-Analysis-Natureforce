@@ -1,0 +1,31 @@
+title: Curl Download Of Windows Executable From Non-Standard Port
+id: f34fe0f6-c226-46d0-a51b-49598055819e
+status: experimental
+description: |
+    Detects an HTTP GET for a file ending in .exe made with a curl User-Agent to a URL with an explicit port
+    other than 80 or 443. Observed in a training capture (Natureforce, 2026-10-01) where a workstation fetched
+    http://107.175.82[.]242:9000/wilow/runner_ilove[.]exe with curl/8.21.0.
+references:
+    - https://www.malware-traffic-analysis.net/
+author: network-intrusion-analysis-natureforce
+date: 2026-11-05
+tags:
+    - attack.command-and-control
+    - attack.t1105
+    - attack.t1571
+logsource:
+    category: proxy
+detection:
+    selection:
+        cs-method: 'GET'
+        c-useragent|startswith: 'curl/'
+        c-uri|endswith: '.exe'
+        c-uri|re: '^https?://[^/]+:[0-9]{2,5}/'
+    filter_common_ports:
+        c-uri|contains:
+            - ':80/'
+            - ':443/'
+    condition: selection and not filter_common_ports
+falsepositives:
+    - Administrators or developers downloading installers with curl from internal or vendor servers on custom ports
+level: medium

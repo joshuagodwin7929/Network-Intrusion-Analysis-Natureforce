@@ -1,0 +1,13 @@
+type,indicator,context,source
+url,hxxp://107.175.82[.]242:9000/wilow/runner_ilove[.]exe,Request for the executable (curl/8.21.0),pcap frame 23091
+ip:port,107.175.82[.]242:9000,Served the executable (MinIO server header),pcap frames 23088-24920
+filename,runner_ilove.exe,Name as served; PE original name is service.exe per VirusTotal,pcap frame 24916 / VirusTotal
+sha256,b789adce70c028a6d17be45ec34667aa95586350ee0c4057e75b138b1ad35061,Extracted executable; 45/70 on VirusTotal,extracted file
+md5,cb50fe432a302b85845bc7ea98742c11,Equals the server ETag,extracted file / frame 24916
+size_bytes,1646592,Equals Content-Length,pcap frame 24916
+user_agent,curl/8.21.0,User-Agent on the executable download,pcap frame 23091
+ip:port,195.63.128[.]106:443,Single long session (15595 packets; 7/92 on VirusTotal),pcap stream 130
+ip,195.64.128[.]106,Listed in the exercise alert; not present in the capture (0/92),exercise alert / VirusTotal
+domain,lapiscorbel[.]info,Passive DNS for 195.63.128[.]106 (unconfirmed link; not in capture),VirusTotal
+domain,v1019443.hosted-by-vdsina[.]com,Passive DNS for 195.63.128[.]106 (unconfirmed link; not in capture),VirusTotal
+domain,rollup[.]capital,Historical passive DNS for 195.63.128[.]106 (unconfirmed link; not in capture),VirusTotal

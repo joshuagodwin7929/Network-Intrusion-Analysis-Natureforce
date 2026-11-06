@@ -2,7 +2,7 @@
 
 By OKUNNUWA JOSHUA GODWIN | [LinkedIn](https://www.linkedin.com/in/okunnuwa-joshua-godwin)
 
-This is my write-up of the "Natureforce" traffic analysis exercise from Malware-Traffic-Analysis.net (2026-10-01). The exercise hands you two SOC alerts and one pcap. I used them to find the infected Windows host and its user, pull out the executable it downloaded, measure the session that came right after, check the indicators on VirusTotal, and wrote down what the capture shows and what it doesn't. I also drafted two detection rules from what I saw.
+This is my write-up of the "Natureforce" traffic analysis exercise from Malware-Traffic-Analysis.net (2026-10-01). The exercise hands you two SOC alerts and one pcap. I used them to find the infected Windows host and its user, pull out the executable it downloaded, measure the session that came right after, check the indicators on VirusTotal, and write down what the capture shows and what it doesn't. I also drafted two detection rules from what I saw.
 
 I did the whole thing in a Kali VM with Wireshark and tshark. If you only read one file, read the report: [`report/incident-report.md`](report/incident-report.md).
 

@@ -1,0 +1,8 @@
+# Never commit captures or malware
+pcaps/
+*.pcap
+*.pcapng
+*.zip
+evidence/extracted/
+*.exe
+*.dll
